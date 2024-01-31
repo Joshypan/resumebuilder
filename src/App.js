@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import ResumeForm from './ResumeForm';
+import TemplateSelector from './TemplateSelector';
+import ResumePreview from './ResumePreview';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [formData, setFormData] = useState({});
+  const [selectedTemplate, setSelectedTemplate] = useState('template1');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Automated Resume Builder</h1>
+      <ResumeForm formData={formData} setFormData={setFormData} />
+      <TemplateSelector setSelectedTemplate={setSelectedTemplate} />
+      <ResumePreview formData={formData} selectedTemplate={selectedTemplate} />
     </div>
   );
-}
+};
 
 export default App;
