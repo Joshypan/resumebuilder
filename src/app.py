@@ -4,6 +4,12 @@ import os
 
 app = Flask(__name__)
 
+# Define a route for the root URL
+@app.route('/')
+def index():
+    return 'Welcome to the Flask backend!'
+
+# Define the route for generating a resume
 @app.route('/generate-resume', methods=['POST'])
 def generate_resume():
     data = request.json  # Assume data is sent as JSON
