@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import ResumeForm from './ResumeForm';
 import TemplateSelector from './TemplateSelector';
 import ResumePreview from './ResumePreview';
@@ -9,11 +10,13 @@ const App = () => {
   const [selectedTemplate, setSelectedTemplate] = useState('template1');
 
   return (
-    <div>
-      <h1>Automated Resume Builder</h1>
-      <ResumeForm formData={formData} setFormData={setFormData} />
-      <TemplateSelector setSelectedTemplate={setSelectedTemplate} />
-      <ResumePreview formData={formData} selectedTemplate={selectedTemplate} />
+    <div className="container mt-4"> {/* Bootstrap container class */}
+      <h1 className="mb-4">Automated Resume Builder</h1> {/* Bootstrap margin class */}
+      <div className="custom-content bg-light shadow p-4"> {/* Apply custom styles along with Bootstrap classes */}
+        <ResumeForm formData={formData} setFormData={setFormData} />
+        <TemplateSelector setSelectedTemplate={setSelectedTemplate} />
+        <ResumePreview formData={formData} selectedTemplate={selectedTemplate} />
+      </div>
     </div>
   );
 };
