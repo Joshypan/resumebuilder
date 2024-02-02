@@ -15,5 +15,5 @@ div {
   background-color: #ffffff; /* White background for content */
   padding: 20px;
   border-radius: 8px; /* Add rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  {/*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */}
 }
