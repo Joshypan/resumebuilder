@@ -1,0 +1,22 @@
+.resume-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.resume-header {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.resume-section {
+  margin-top: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
